@@ -5,6 +5,7 @@
 void generate_matriz(int n, int ***matriz)
 {
     *matriz = (int **)malloc(n * sizeof(int *));
+    int valor = n * n;
     for (int i = 0; i < n; i++)
     {
         (*matriz)[i] = (int *)malloc(n * sizeof(int));
@@ -16,7 +17,7 @@ void generate_matriz(int n, int ***matriz)
             }
             else
             {
-                (*matriz)[i][j] = rand() % 100 + 1;
+                (*matriz)[i][j] = valor--;
             }
         }
     }
