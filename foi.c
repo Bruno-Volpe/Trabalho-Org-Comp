@@ -21,8 +21,8 @@ void generate_matriz(int n, int ***matriz)
             }
         }
     }
-    int zero_i = rand() % (n - 2) + 1;
-    int zero_j = rand() % (n - 2) + 1;
+    int zero_i = 5 % (n - 2) + 1;
+    int zero_j = 5 % (n - 2) + 1;
     (*matriz)[zero_i][zero_j] = 0;
 }
 
@@ -142,7 +142,7 @@ int esta_em_ordem_crescente(int **matriz, int n)
 
 int main()
 {
-    srand(time(NULL));
+    // srand(time(NULL));
 
     int TAMANHO_TABULEIRO;
     printf("Digite o tamanho do tabuleiro: ");
